@@ -4,7 +4,7 @@ gem 'pry'
 gem 'byebug'
 gem 'pry-byebug'
 gem "font-awesome-rails"
-
+gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
