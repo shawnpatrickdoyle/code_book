@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module CodeBook
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -19,7 +20,20 @@ module CodeBook
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
+    config.serve_static_files = true
+    config.assets.precompile += %w( typed.js )
+    config.assets.precompile += %w( dashboard.js )
+    config.assets.precompile += %w( users.coffee )
+    config.assets.precompile += %w( book.png )
+    config.assets.precompile += %w( code_book.ico )
+    config.assets.precompile += %w( desktop.jpg )
+    config.assets.precompile += %w( konami.png )
+    config.assets.precompile += %w( application.css )
+    config.assets.precompile += %w( application.css.scss )
+    config.assets.precompile += %w( main.scss )
+    config.assets.precompile += %w( profiles.scss )
+    config.assets.precompile += %w( resources.scss )
+    config.assets.precompile += %w( william.css )
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end
